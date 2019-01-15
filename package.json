@@ -1,0 +1,49 @@
+{
+  "name": "publishimo-cli",
+  "version": "2.1.0",
+  "license": "MIT",
+  "author": {
+    "name": "Jaid",
+    "url": "https://github.com/jaid",
+    "email": "jaid.jsx@gmail.com"
+  },
+  "repository": "https://github.com/Jaid/publishimo-cli",
+  "description": "Command line interface for publishimo",
+  "bin": "dist/index.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack.config.babel.js",
+    "build:dev": "webpack --config config/webpack.config.babel.js",
+    "test": "npm run build:prod && jest",
+    "test:dev": "npm run build:dev && jest",
+    "prepare": "jest --clearCache"
+  },
+  "babel": {
+    "presets": [
+      "jaid"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "jaid"
+  },
+  "dependencies": {
+    "publishimo": "2.2.0",
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/register": "^7.0.0",
+    "babel-jest": "24.0.0-alpha.12",
+    "babel-preset-jaid": "2.6.0",
+    "coffee": "^5.2.1",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.12.0",
+    "eslint-config-jaid": "1.9.0",
+    "jest": "24.0.0-alpha.12",
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1",
+    "webpack-config-node": "1.1.0"
+  }
+}

@@ -29,7 +29,7 @@
     "extends": "jaid"
   },
   "dependencies": {
-    "publishimo": "2.3.0",
+    "publishimo": "2.4.0",
     "commander": "^2.19.0"
   },
   "devDependencies": {

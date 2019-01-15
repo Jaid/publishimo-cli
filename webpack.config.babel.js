@@ -6,7 +6,7 @@ const isDevelopment = process.env.NODE_ENV !== "production"
 
 export default webpackConfigNode({
   isDevelopment,
-  packageRoot: path.resolve(__dirname, ".."),
+  packageRoot: __dirname,
   extra: {
     devtool: "inline-source-map",
   },

@@ -3,7 +3,8 @@ import path from "path"
 import coffee from "coffee"
 
 const index = path.resolve(__dirname, "..", "dist")
-it("should run", () => coffee.fork(index, ["args"])
+
+it("should run", () => coffee.fork(index)
   .debug()
   .expect("stdout", "function")
   .expect("code", 0)

@@ -14,8 +14,8 @@
     "dist/*"
   ],
   "scripts": {
-    "build:prod": "cross-env NODE_ENV=production webpack --config config/webpack.config.babel.js",
-    "build:dev": "webpack --config config/webpack.config.babel.js",
+    "build:prod": "cross-env NODE_ENV=production webpack",
+    "build:dev": "webpack",
     "test": "npm run build:prod && jest",
     "test:dev": "npm run build:dev && jest",
     "prepare": "jest --clearCache"
@@ -29,7 +29,7 @@
     "extends": "jaid"
   },
   "dependencies": {
-    "publishimo": "2.4.0",
+    "publishimo": "2.4.1",
     "commander": "^2.19.0"
   },
   "devDependencies": {
@@ -44,6 +44,6 @@
     "jest": "24.0.0-alpha.12",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
-    "webpack-config-node": "1.1.0"
+    "webpack-config-node": "1.4.0"
   }
 }

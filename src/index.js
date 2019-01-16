@@ -1,3 +1,1 @@
-import publishimo from "publishimo"
-
-console.log(typeof publishimo)
+const p = require("publishimo")

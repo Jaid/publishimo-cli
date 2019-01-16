@@ -1,12 +1,9 @@
-import webpackConfigNode from "webpack-config-node"
+import webpackConfigJaid from "webpack-config-jaid"
 
 const isDevelopment = process.env.NODE_ENV !== "production"
 
-export default webpackConfigNode({
+export default webpackConfigJaid({
   isDevelopment,
   packageRoot: __dirname,
   type: "cli",
-  extra: {
-    devtool: "inline-source-map",
-  },
 })

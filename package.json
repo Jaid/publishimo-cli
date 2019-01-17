@@ -1,6 +1,6 @@
 {
   "name": "publishimo-cli",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "MIT",
   "author": {
     "name": "Jaid",
@@ -19,7 +19,8 @@
     "test": "npm run build:prod && jest",
     "test:dev": "npm run build:dev && jest",
     "prepare": "jest --clearCache",
-    "start": "npm run build:prod && node dist"
+    "start": "npm run build:prod && node dist",
+    "prepublishOnly": "npm run build:prod"
   },
   "babel": {
     "presets": [

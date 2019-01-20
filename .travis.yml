@@ -1,6 +1,6 @@
 language: node_js
 node_js: [node, lts/*]
-os: [linux, windows, osx]
+os: [linux, osx] # Excluded Windows (currently doesn't work with the env variable below)
 env:
   global:
     secure: DkOPhl8D0K1hxm/xX0o15L7eDQDoOPMQQIeTbForh0s9eGkqMo2lB/ul5houS0lbxEtmkPGmf89I9FdbWidpqYgbSxJxgfHhcfNuGgJzZl4aYlP8KMT6Igv9neIgojZzojls5nDhPEpSFO/Gb5sQ6Yu+4OCvBu8QBNmhkmc+7V0ESgwOLyU9PDHbcv1BIHYKnjJrxRyRq5YxA5muDc3vgl0K5Jxq1qGbQwYOFkv7to/xIEz1LPohSPnT2di+1Fzu5tBz0huUtdnPKFDGqsG5En9ExxvcEdb/MOsfPVFsB8HfvbN+uD4lh9VcoNsguzUFYmxTvEfg2bOqqxmTMUBlVRn9sANKcn6Xkdr7tpSXFOXWHgR/K0lZ1ygohWufvpbsCvKlgLxuBddD50XNOJNr6+gPMWBHXR60oFUAlpffdQPcrbR8H7ilXWEyeH77B3r+x+383hqf5S+DUmGCLZtXV9Tu7EkmCaSlqhTB9XuxnxcNFOZhSt2rQS47PuUwWT5uvfJNbqaiBiwBsA6xuF30aX4wnF6DrIWwHEJsPjaHkQIwnNi1tNR1ZVLr/K2JQt3NIgBWzCp60ySXqBxcnI8xqbBsLArWfB1WWDy7t2ktDCDxNDNQe5oEI67KpgUj9yR0U6Kd8SDlQq9FrAumOsgPbDEUOf3nujZSB4K6Kqw0ucA=

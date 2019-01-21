@@ -23,31 +23,35 @@ const log = winston.createLogger({
   transports: [new winston.transports.Console],
 })
 
-const stats = publishimo({
-  pkg: commander.cwd,
-  output: commander.output,
-})
+const run = async () => {
+  const stats = await publishimo({
+    pkg: commander.cwd,
+    output: commander.output,
+  })
 
-if (isApi) {
-  if (commander.json) {
-    log.info(JSON.stringify(stats.generatedPkg))
+  if (isApi) {
+    if (commander.json) {
+      log.info(JSON.stringify(stats.generatedPkg))
+    }
+    if (commander.stats) {
+      log.info(JSON.stringify(stats))
+    }
+    process.exit(0)
   }
+
+  if (stats.sourcePkgLocation) {
+    log.info(`Input package: ${stats.sourcePkgLocation |> path.resolve}`)
+  }
+
+  if (stats.outputPath) {
+    log.info(`Saved package as ${stats.outputPath |> path.resolve}`)
+  }
+
   if (commander.stats) {
-    log.info(JSON.stringify(stats))
+    log.info(JSON.stringify(stats, null, 2) |> jsonColorizer)
+  } else if (commander.json) {
+    log.info(JSON.stringify(stats.generatedPkg, null, 2) |> jsonColorizer)
   }
-  process.exit(0)
 }
 
-if (stats.sourcePkgLocation) {
-  log.info(`Input package: ${stats.sourcePkgLocation |> path.resolve}`)
-}
-
-if (stats.outputPath) {
-  log.info(`Saved package as ${stats.outputPath |> path.resolve}`)
-}
-
-if (commander.stats) {
-  log.info(JSON.stringify(stats, null, 2) |> jsonColorizer)
-} else if (commander.json) {
-  log.info(JSON.stringify(stats.generatedPkg, null, 2) |> jsonColorizer)
-}
+run()

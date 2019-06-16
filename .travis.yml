@@ -1,6 +1,35 @@
 language: node_js
 node_js: [node, lts/*]
-os: [linux, osx] # Excluded Windows (currently doesn't work with the env variable below)
-env:
-  global:
-    secure: DkOPhl8D0K1hxm/xX0o15L7eDQDoOPMQQIeTbForh0s9eGkqMo2lB/ul5houS0lbxEtmkPGmf89I9FdbWidpqYgbSxJxgfHhcfNuGgJzZl4aYlP8KMT6Igv9neIgojZzojls5nDhPEpSFO/Gb5sQ6Yu+4OCvBu8QBNmhkmc+7V0ESgwOLyU9PDHbcv1BIHYKnjJrxRyRq5YxA5muDc3vgl0K5Jxq1qGbQwYOFkv7to/xIEz1LPohSPnT2di+1Fzu5tBz0huUtdnPKFDGqsG5En9ExxvcEdb/MOsfPVFsB8HfvbN+uD4lh9VcoNsguzUFYmxTvEfg2bOqqxmTMUBlVRn9sANKcn6Xkdr7tpSXFOXWHgR/K0lZ1ygohWufvpbsCvKlgLxuBddD50XNOJNr6+gPMWBHXR60oFUAlpffdQPcrbR8H7ilXWEyeH77B3r+x+383hqf5S+DUmGCLZtXV9Tu7EkmCaSlqhTB9XuxnxcNFOZhSt2rQS47PuUwWT5uvfJNbqaiBiwBsA6xuF30aX4wnF6DrIWwHEJsPjaHkQIwnNi1tNR1ZVLr/K2JQt3NIgBWzCp60ySXqBxcnI8xqbBsLArWfB1WWDy7t2ktDCDxNDNQe5oEI67KpgUj9yR0U6Kd8SDlQq9FrAumOsgPbDEUOf3nujZSB4K6Kqw0ucA=
+script:
+  - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNode.bash | bash
+jobs:
+  include:
+    - stage: Deploy
+      if: tag IS present
+      node_js: node
+      script:
+        - curl https://gist.githubusercontent.com/Jaid/284917bd3e938add97b699a18b957d8c/raw/ciNodeRelease.bash | bash
+        - pkgName=$(npx package-name-cli)
+      deploy:
+        - provider: pages
+          local_dir: dist/page
+          fqdn: $pkgName.jaid.codes
+          skip_cleanup: true
+          github_token: $GITHUB_TOKEN
+          on:
+            tags: true
+            condition: "-f ~/deployPage"
+        - provider: releases
+          file_glob: true
+          file: dist/github/*
+          skip_cleanup: true
+          api_key: $GITHUB_TOKEN
+          on:
+            tags: true
+            condition: "-f ~/deployReleases"
+        - provider: script
+          script: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > .npmrc && npm publish dist/package/production
+          skip_cleanup: true
+          on:
+            tags: true
+            condition: "-f ~/deployNpm"

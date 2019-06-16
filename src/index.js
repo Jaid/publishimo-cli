@@ -5,14 +5,15 @@ import publishimo from "publishimo"
 import winston from "winston"
 import jsonColorizer from "json-colorizer"
 
-process.argv |> commander
-  .version(__VERSION__)
+commander
+  .name(_PKG_NAME)
+  .version(_PKG_VERSION)
   .option("-c, --cwd [dir]", "Project folder that contains a package.json", ".")
   .option("-j, --json", "Print generated package")
   .option("-s, --stats", "Print all stats")
   .option("-o, --output [dir]", "Output directory for the new package")
   .option("--color", "Enabled colored output")
-  .parse
+  .parse(process.argv)
 
 // TODO The parameter relations are pretty confusing at the moment.
 const isApi = !commander.color && (commander.json || commander.stats)

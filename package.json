@@ -1,6 +1,5 @@
 {
   "version": "2.4.1",
-  "private": true,
   "webpackConfigJaid": "cli",
   "author": "Jaid <jaid.jsx@gmail.com> (https://github.com/Jaid)",
   "scripts": {
@@ -33,5 +32,6 @@
     "jest": "24.8.0",
     "webpack": "^4.34.0",
     "webpack-config-jaid": "5.7.0"
-  }
+  },
+  "name": "publishimo-cli"
 }

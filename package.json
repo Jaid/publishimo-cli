@@ -36,5 +36,9 @@
   },
   "name": "publishimo-cli",
   "description": "Command line tools that runs publishimo to output an optimized version of package.json.",
-  "funding": "https://github.com/sponsors/jaid"
+  "funding": "https://github.com/sponsors/jaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaid/publishimo-cli"
+  }
 }

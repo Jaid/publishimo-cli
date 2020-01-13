@@ -1,9 +1,9 @@
 # publishimo-cli
 
 
-<a href="https://raw.githubusercontent.com/Jaid/publishimo-cli/master/license.txt"><img src="https://img.shields.io/github/license/Jaid/publishimo-cli?style=flat-square" alt="License"/></a>  
-<a href="https://actions-badge.atrox.dev/Jaid/publishimo-cli/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2FJaid%2Fpublishimo-cli%2Fbadge" alt="Build status"/></a> <a href="https://github.com/Jaid/publishimo-cli/commits"><img src="https://img.shields.io/github/commits-since/Jaid/publishimo-cli/v2.4.1?style=flat-square&logo=github" alt="Commits since v2.4.1"/></a> <a href="https://github.com/Jaid/publishimo-cli/commits"><img src="https://img.shields.io/github/last-commit/Jaid/publishimo-cli?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/Jaid/publishimo-cli/issues"><img src="https://img.shields.io/github/issues/Jaid/publishimo-cli?style=flat-square&logo=github" alt="Issues"/></a>  
-<a href="https://npmjs.com/package/publishimo-cli"><img src="https://img.shields.io/npm/v/publishimo-cli?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/Jaid/publishimo-cli/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/publishimo-cli?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/publishimo-cli"><img src="https://img.shields.io/npm/dm/publishimo-cli?style=flat-square&logo=npm" alt="Downloads"/></a>
+<a href="https://raw.githubusercontent.com/jaid/publishimo-cli/master/license.txt"><img src="https://img.shields.io/github/license/jaid/publishimo-cli?style=flat-square" alt="License"/></a> <a href="https://github.com/sponsors/jaid"><img src="https://img.shields.io/badge/<3-Sponsor-FF45F1?style=flat-square" alt="Sponsor publishimo-cli"/></a>
+<a href="https://actions-badge.atrox.dev/jaid/publishimo-cli/goto"><img src="https://img.shields.io/endpoint.svg?style=flat-square&url=https%3A%2F%2Factions-badge.atrox.dev%2Fjaid%2Fpublishimo-cli%2Fbadge" alt="Build status"/></a> <a href="https://github.com/jaid/publishimo-cli/commits"><img src="https://img.shields.io/github/commits-since/jaid/publishimo-cli/v2.4.1?style=flat-square&logo=github" alt="Commits since v2.4.1"/></a> <a href="https://github.com/jaid/publishimo-cli/commits"><img src="https://img.shields.io/github/last-commit/jaid/publishimo-cli?style=flat-square&logo=github" alt="Last commit"/></a> <a href="https://github.com/jaid/publishimo-cli/issues"><img src="https://img.shields.io/github/issues/jaid/publishimo-cli?style=flat-square&logo=github" alt="Issues"/></a>  
+<a href="https://npmjs.com/package/publishimo-cli"><img src="https://img.shields.io/npm/v/publishimo-cli?style=flat-square&logo=npm&label=latest%20version" alt="Latest version on npm"/></a> <a href="https://github.com/jaid/publishimo-cli/network/dependents"><img src="https://img.shields.io/librariesio/dependents/npm/publishimo-cli?style=flat-square&logo=npm" alt="Dependents"/></a> <a href="https://npmjs.com/package/publishimo-cli"><img src="https://img.shields.io/npm/dm/publishimo-cli?style=flat-square&logo=npm" alt="Downloads"/></a>
 
 **Command line tools that runs publishimo to output an optimized version of package.json.**
 
@@ -33,7 +33,6 @@ yarn global add publishimo-cli@^2.4.1
 
 
 
-
 ## CLI Usage
 After installing package `publishimo-cli` globally, you can use its command line interface.
 ```bash
@@ -53,7 +52,7 @@ publishimo-cli --help
 
 Setting up:
 ```bash
-git clone git@github.com:Jaid/publishimo-cli.git
+git clone git@github.com:jaid/publishimo-cli.git
 cd publishimo-cli
 npm install
 ```

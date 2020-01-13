@@ -35,5 +35,6 @@
     "webpack-config-jaid": "11.0.0"
   },
   "name": "publishimo-cli",
-  "description": "Command line tools that runs publishimo to output an optimized version of package.json."
+  "description": "Command line tools that runs publishimo to output an optimized version of package.json.",
+  "funding": "https://github.com/sponsors/jaid"
 }

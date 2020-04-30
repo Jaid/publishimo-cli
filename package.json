@@ -42,5 +42,12 @@
     "url": "https://github.com/jaid/publishimo-cli"
   },
   "homepage": "https://github.com/Jaid/publishimo-cli",
-  "keywords": []
+  "keywords": [
+    "build",
+    "build-tool",
+    "cli",
+    "publishimo",
+    "util",
+    "utility"
+  ]
 }

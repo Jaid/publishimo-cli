@@ -49,5 +49,6 @@
     "publishimo",
     "util",
     "utility"
-  ]
+  ],
+  "type": "module"
 }
